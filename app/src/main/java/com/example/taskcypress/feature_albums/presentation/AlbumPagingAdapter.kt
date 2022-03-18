@@ -27,7 +27,7 @@ class AlbumPagingAdapter(
 
             binding.childRecyclerview.layoutManager = LinearLayoutManager(itemView.context, LinearLayoutManager.HORIZONTAL,false)
             binding.childRecyclerview.adapter = photoAdapter
-            binding.childRecyclerview.setHasFixedSize(true)
+//            binding.childRecyclerview.setHasFixedSize(true)
 
             CoroutineScope(Dispatchers.IO).launch {
                 viewModel.getPagedPhotos(album.id.toString()).collectLatest {
